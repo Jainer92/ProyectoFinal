@@ -1,1 +1,18 @@
-Primer prueba
+Documentación (Parte 1)
+Caratula 
+Introducción 
+Objetivo general (1) 
+Objetivos específicos (3) 
+Análisis del proyecto: 
+    ¿Qué entradas se requieren? 
+    Tipo y cantidad de datos 
+    ¿Cuál es la salida deseada?
+    Tipo y cantidad de dato resultado 
+    ¿Qué método produce la salida deseada? 
+Proceso. 
+    Requisitos o requerimientos adicionales y restricciones. 
+Diseño: 
+    Realizar los diagramas de flujo. 
+
+
+    
