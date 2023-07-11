@@ -1,8 +1,8 @@
-import BusineesLogic.Menu;
+import BusinessLogic.Menu;
 
 public class App {
+    public static void main(String[] args) {
 
-    public static void main(String[] args) throws Exception {
-    new Menu(); 
+        new Menu();
     }
 }
