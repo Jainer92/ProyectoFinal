@@ -24,7 +24,13 @@ public class Menu {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Crear reservacion");
+                    System.out.println("=====Crear reservacion=====");
+                    Scanner Scan = new Scanner(System.in);
+                    System.out.println("Favor ingrese la fecha en la que desea visitar el restaurante");
+                    String nuevaReserva = Scan.next();
+                    
+                    System.out.println(nuevaReserva);
+
                     break;
                 case 2:
                     System.out.println("Ver reservaciones");
@@ -40,11 +46,9 @@ public class Menu {
                     break;
             }
             System.out.println();
-        } 
-        while (opcion != 4);
+        } while (opcion != 4);
         entrada.close();
     }
-
 
     public void login() {
         Scanner entrada = new Scanner(System.in);
