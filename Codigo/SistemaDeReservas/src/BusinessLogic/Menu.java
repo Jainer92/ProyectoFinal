@@ -2,7 +2,13 @@ package BusinessLogic;
 
 import java.util.Scanner;
 
+import Common.Cliente;
+import Common.Mesa;
+
 public class Menu {
+    private Mesa[] vgArregloDeMesas = new Mesa[10];
+    final String vgEstadoDisponible = "Disponible";
+    final String vgEstadoReservada = "Reservada";
 
     public Menu() {
         login();
@@ -135,6 +141,43 @@ public class Menu {
         }
         entrada.close();
 
+    }
+    public void inicializarMesas() {
+        for (int indice = 0; vgArregloDeMesas.length > indice; indice++) {
+            vgArregloDeMesas[indice] = new Mesa(indice + 1, 4);
+        }
+    }
+
+    public void getMesasPorEstado(String vpEstado) {
+        System.out.println("lista de mesas:" + vpEstado);
+
+        for (int indice = 0; vgArregloDeMesas.length > indice; indice++) {
+            String vlEstado = vgArregloDeMesas[indice].getEstado();
+
+            if (vlEstado.equals("disponible")) {
+                System.out.println("Mesa #" + vgArregloDeMesas[indice].getNumeroDeMesa());
+
+            }
+        }
+
+    }
+
+    public void reservarMesa(Cliente vpCliente, int vpNumeroDeMesa, String vpfecha, String vphora) {
+        for (int indice = 0; vgArregloDeMesas.length > indice; indice++) {
+            if (vgArregloDeMesas[indice].getNumeroDeMesa() == vpNumeroDeMesa
+                    && vgArregloDeMesas[indice].getEstado().equals("Disponible")) {
+                System.out.println("La mesa#" + vpNumeroDeMesa + ",fue reservada de forma exitosa!");
+
+                vgArregloDeMesas[indice].setEstado(vgEstadoReservada);
+                vgArregloDeMesas[indice].setCliente(vpCliente);
+                vgArregloDeMesas[indice].setFecha(vpfecha);
+                vgArregloDeMesas[indice].setHora(vphora);
+
+                return;
+            }
+
+        }
+        System.out.println("El numero de mesa: " + vpNumeroDeMesa + " no esta disponible!");
     }
 
 }
