@@ -4,6 +4,11 @@ public class Mesa {
     private int numeroDeMesa;
     private int numeroDeSillas;
 
+    private String Estado;
+    private Cliente Cliente;
+    private String fecha; 
+    private String hora;
+
 
     public Mesa(int tableNumber, int numberOfChairs){
         numeroDeMesa = tableNumber = 0;
