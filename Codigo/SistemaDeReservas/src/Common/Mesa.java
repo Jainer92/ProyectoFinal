@@ -7,6 +7,7 @@ public class Mesa {
     private String Estado;
     private Cliente Cliente;
     private String fecha; 
+    private String hora;
 
     public String getEstado() {
         return Estado;
@@ -48,12 +49,13 @@ public class Mesa {
     }
 
 
-    private String hora;
+
 
 
     public Mesa(int tableNumber, int numberOfChairs){
-        numeroDeMesa = tableNumber = 0;
-        numeroDeSillas= numberOfChairs=0;
+        numeroDeMesa = tableNumber;
+        numeroDeSillas= numberOfChairs;
+        Estado = "Disponible";
     }
 
 
