@@ -4,16 +4,23 @@ import java.util.Scanner;
 
 import Common.Cliente;
 import Common.Mesa;
+import Common.Reserva;
 
 public class Menu {
     private Mesa[] vgArregloDeMesas = new Mesa[10];
     final String vgEstadoDisponible = "Disponible";
     final String vgEstadoReservada = "Reservada";
 
+    private Reserva[] vgArregloDeReservas = new Reserva[30];
+    final String vgReservaDisponible = "Disponible";
+    final String vgReservadaCreada = "Reservada";
+
+
     public Menu() {
+        inicializarReservas();
+        inicializarMesas();
         login();
 
-        MostrarOpciones();
     }
 
     public void MostrarOpciones() {
@@ -25,7 +32,9 @@ public class Menu {
             System.out.println("2. Ver reservaciones");
             System.out.println("3. Cancelar reservacion");
             System.out.println("4. Salir");
-            System.out.println("Elige una opcion");
+            System.out.println("========================");
+            System.out.println("   Elige una opcion");
+            System.out.println("========================");
             opcion = entrada.nextInt();
 
             switch (opcion) {
@@ -54,6 +63,7 @@ public class Menu {
                             case 1:
                                 System.out.println("======Enero=====");
                                 Scanner Sc = new Scanner(System.in);
+                                getReservasPorEstado(vgEstadoDisponible);
                                 System.out.println("Favor digite el dia");
                                 int diaSeleccionado = Sc.nextInt();
                                 System.out.println("Se ha seleccionado el dia: "+ diaSeleccionado+ " de Enero");
@@ -102,9 +112,11 @@ public class Menu {
                     break;
                 case 2:
                     System.out.println("Ver reservaciones");
+                    getMesasPorEstado(vgEstadoDisponible);
                     break;
                 case 3:
                     System.out.println("Cancelar reservacion");
+                    getReservasPorEstado(vgEstadoDisponible);
                     break;
                 case 4:
                     System.out.println("Saliendo del programa");
@@ -154,7 +166,7 @@ public class Menu {
         for (int indice = 0; vgArregloDeMesas.length > indice; indice++) {
             String vlEstado = vgArregloDeMesas[indice].getEstado();
 
-            if (vlEstado.equals("disponible")) {
+            if (vlEstado.equals(vpEstado)) {
                 System.out.println("Mesa #" + vgArregloDeMesas[indice].getNumeroDeMesa());
 
             }
@@ -164,14 +176,18 @@ public class Menu {
 
     public void reservarMesa(Cliente vpCliente, int vpNumeroDeMesa, String vpfecha, String vphora) {
         for (int indice = 0; vgArregloDeMesas.length > indice; indice++) {
-            if (vgArregloDeMesas[indice].getNumeroDeMesa() == vpNumeroDeMesa
-                    && vgArregloDeMesas[indice].getEstado().equals("Disponible")) {
-                System.out.println("La mesa#" + vpNumeroDeMesa + ",fue reservada de forma exitosa!");
+            Mesa vlMesaDelCiclo = vgArregloDeMesas[indice];
+            String vlEstado = vlMesaDelCiclo.getEstado();
+            int vlNumeroMesa = vlMesaDelCiclo.getNumeroDeMesa();
+
+
+            if (vlNumeroMesa == vpNumeroDeMesa  && vlEstado.equals(vgEstadoDisponible)) {
+
+                System.out.println("La mesa # " + vpNumeroDeMesa + ", fue reservada de forma exitosa!");
 
                 vgArregloDeMesas[indice].setEstado(vgEstadoReservada);
                 vgArregloDeMesas[indice].setCliente(vpCliente);
-                vgArregloDeMesas[indice].setFecha(vpfecha);
-                vgArregloDeMesas[indice].setHora(vphora);
+
 
                 return;
             }
@@ -179,5 +195,50 @@ public class Menu {
         }
         System.out.println("El numero de mesa: " + vpNumeroDeMesa + " no esta disponible!");
     }
+
+
+
+    public void inicializarReservas() {
+        for (int indice = 0; vgArregloDeReservas.length > indice; indice++) {
+            vgArregloDeReservas[indice] = new Reserva(indice + 1, 30);
+        }
+    }
+
+    public void getReservasPorEstado(String vpEstado) {
+        System.out.println("Lista de dias:" + vpEstado);
+
+        for (int indice = 0; vgArregloDeReservas.length > indice; indice++) {
+            String vlEstado = vgArregloDeReservas[indice].getReservaEstado();
+
+            if (vlEstado.equals(vpEstado)) {
+                System.out.println("Dia " + vgArregloDeReservas[indice].getNumeroDeReserva());
+
+            }
+        }
+
+    }
+
+    public void crearReserva(Cliente vpCliente, int vpNumeroDeReserva, String vpfecha, String vphora) {
+        for (int indice = 0; vgArregloDeReservas.length > indice; indice++) {
+            Reserva vlReservaDelCiclo = vgArregloDeReservas[indice];
+            String vlEstado = vlReservaDelCiclo.getReservaEstado(); 
+            int vlNumeroReserva = vlReservaDelCiclo.getNumeroDeReserva();
+
+
+            if (vlNumeroReserva == vpNumeroDeReserva  && vlEstado.equals(vgReservaDisponible)) {
+
+                System.out.println("La Reserva " + vpNumeroDeReserva + ", fue creada de forma exitosa!");
+
+                vgArregloDeMesas[indice].setEstado(vgEstadoReservada);
+                vgArregloDeMesas[indice].setCliente(vpCliente);
+
+
+                return;
+            }
+
+        }
+        System.out.println("El numero de mesa: " + vpNumeroDeReserva + " no esta disponible!");
+    }
+
 
 }
