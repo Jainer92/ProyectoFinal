@@ -69,43 +69,271 @@ public class Menu {
                                 getMesasPorEstado(vgEstadoDisponible);
                                 System.out.println("Favor digite la mesa que desea");
                                 int mesaSeleccionada = Sc2.nextInt();
-                                crearReserva(diaSeleccionado, vgEstadoReservada, vgEstadoDisponible);
+                                System.out.println("====================================================");
                                 reservarMesa(null, mesaSeleccionada, vgEstadoReservada, vgEstadoDisponible);
-                                System.out.println("***Se ha creado la reservación de la mesa número "
+                                crearReserva(diaSeleccionado, vgEstadoReservada, vgEstadoDisponible);
+                                
+                                System.out.println("====================================================");
+                                System.out.println();
+                                System.out.println();
+                                System.out.println("**************************************************************************");
+                                System.out.println("***Se ha creado la reservación de la mesa número  "
                                         + mesaSeleccionada + " para el " + diaSeleccionado + " de Enero***");
+                                System.out.println("**************************************************************************");
+                                System.out.println();
                                 break;
                             case 2:
                                 System.out.println("Febrero");
+                                Scanner ScFeb = new Scanner(System.in);
+                                Scanner ScFeb2 = new Scanner(System.in);
+                                getReservasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite el día");
+                                int febSeleccionado = ScFeb.nextInt();
+                                getMesasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite la mesa que desea");
+                                int febMesaSeleccionada = ScFeb2.nextInt();
+                                System.out.println("====================================================");
+                                reservarMesa(null, febMesaSeleccionada, vgEstadoReservada, vgEstadoDisponible);
+                                crearReserva(febSeleccionado, vgEstadoReservada, vgEstadoDisponible);
+                                
+                                System.out.println("====================================================");
+                                System.out.println();
+                                System.out.println();
+                                System.out.println("**************************************************************************");
+                                System.out.println("***Se ha creado la reservación de la mesa número  "
+                                        + febMesaSeleccionada + " para el " + febSeleccionado + " de Febrero***");
+                                System.out.println("**************************************************************************");
+                                System.out.println();
                                 break;
                             case 3:
                                 System.out.println("Marzo");
+                                Scanner ScMar = new Scanner(System.in);
+                                Scanner ScMar2 = new Scanner(System.in);
+                                getReservasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite el día");
+                                int marSeleccionado = ScMar.nextInt();
+                                getMesasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite la mesa que desea");
+                                int marMesaSeleccionada = ScMar2.nextInt();
+                                System.out.println("====================================================");
+                                reservarMesa(null, marMesaSeleccionada, vgEstadoReservada, vgEstadoDisponible);
+                                crearReserva(marSeleccionado, vgEstadoReservada, vgEstadoDisponible);
+                                
+                                System.out.println("====================================================");
+                                System.out.println();
+                                System.out.println();
+                                System.out.println("**************************************************************************");
+                                System.out.println("***Se ha creado la reservación de la mesa número  "
+                                        + marMesaSeleccionada + " para el " + marSeleccionado + " de Marzo***");
+                                System.out.println("**************************************************************************");
+                                System.out.println();
                                 break;
                             case 4:
                                 System.out.println("Abril");
+                                Scanner ScAbr = new Scanner(System.in);
+                                Scanner ScAbr2 = new Scanner(System.in);
+                                getReservasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite el día");
+                                int abrSeleccionado = ScAbr.nextInt();
+                                getMesasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite la mesa que desea");
+                                int abrMesaSeleccionada = ScAbr2.nextInt();
+                                System.out.println("====================================================");
+                                reservarMesa(null, abrMesaSeleccionada, vgEstadoReservada, vgEstadoDisponible);
+                                crearReserva(abrSeleccionado, vgEstadoReservada, vgEstadoDisponible);
+                                
+                                System.out.println("====================================================");
+                                System.out.println();
+                                System.out.println();
+                                System.out.println("**************************************************************************");
+                                System.out.println("***Se ha creado la reservación de la mesa número  "
+                                        + abrMesaSeleccionada + " para el " + abrSeleccionado + " de Abril***");
+                                System.out.println("**************************************************************************");
+                                System.out.println();
                                 break;
                             case 5:
                                 System.out.println("Mayo");
+                                Scanner ScMay = new Scanner(System.in);
+                                Scanner ScMay2 = new Scanner(System.in);
+                                getReservasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite el día");
+                                int maySeleccionado = ScMay.nextInt();
+                                getMesasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite la mesa que desea");
+                                int mayMesaSeleccionada = ScMay2.nextInt();
+                                System.out.println("====================================================");
+                                reservarMesa(null, mayMesaSeleccionada, vgEstadoReservada, vgEstadoDisponible);
+                                crearReserva(maySeleccionado, vgEstadoReservada, vgEstadoDisponible);
+                                
+                                System.out.println("====================================================");
+                                System.out.println();
+                                System.out.println();
+                                System.out.println("**************************************************************************");
+                                System.out.println("***Se ha creado la reservación de la mesa número  "
+                                        + mayMesaSeleccionada + " para el " + maySeleccionado + " de Mayo***");
+                                System.out.println("**************************************************************************");
+                                System.out.println();
                                 break;
                             case 6:
                                 System.out.println("Junio");
+                                Scanner ScJun = new Scanner(System.in);
+                                Scanner ScJun2 = new Scanner(System.in);
+                                getReservasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite el día");
+                                int junSeleccionado = ScJun.nextInt();
+                                getMesasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite la mesa que desea");
+                                int junMesaSeleccionada = ScJun2.nextInt();
+                                System.out.println("====================================================");
+                                reservarMesa(null, junMesaSeleccionada, vgEstadoReservada, vgEstadoDisponible);
+                                crearReserva(junSeleccionado, vgEstadoReservada, vgEstadoDisponible);
+                                
+                                System.out.println("====================================================");
+                                System.out.println();
+                                System.out.println();
+                                System.out.println("**************************************************************************");
+                                System.out.println("***Se ha creado la reservación de la mesa número  "
+                                        + junMesaSeleccionada + " para el " + junSeleccionado + " de Junio***");
+                                System.out.println("**************************************************************************");
+                                System.out.println();
                                 break;
                             case 7:
                                 System.out.println("Julio");
+                                Scanner ScJul = new Scanner(System.in);
+                                Scanner ScJul2 = new Scanner(System.in);
+                                getReservasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite el día");
+                                int julSeleccionado = ScJul.nextInt();
+                                getMesasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite la mesa que desea");
+                                int julMesaSeleccionada = ScJul2.nextInt();
+                                System.out.println("====================================================");
+                                reservarMesa(null, julMesaSeleccionada, vgEstadoReservada, vgEstadoDisponible);
+                                crearReserva(julSeleccionado, vgEstadoReservada, vgEstadoDisponible);
+                                
+                                System.out.println("====================================================");
+                                System.out.println();
+                                System.out.println();
+                                System.out.println("**************************************************************************");
+                                System.out.println("***Se ha creado la reservación de la mesa número  "
+                                        + julMesaSeleccionada + " para el " + julSeleccionado + " de Julio***");
+                                System.out.println("**************************************************************************");
+                                System.out.println();
                                 break;
                             case 8:
                                 System.out.println("Agosto");
+                                Scanner ScAgo = new Scanner(System.in);
+                                Scanner ScAgo2 = new Scanner(System.in);
+                                getReservasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite el día");
+                                int agoSeleccionado = ScAgo.nextInt();
+                                getMesasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite la mesa que desea");
+                                int agoMesaSeleccionada = ScAgo2.nextInt();
+                                System.out.println("====================================================");
+                                reservarMesa(null, agoMesaSeleccionada, vgEstadoReservada, vgEstadoDisponible);
+                                crearReserva(agoSeleccionado, vgEstadoReservada, vgEstadoDisponible);
+                                
+                                System.out.println("====================================================");
+                                System.out.println();
+                                System.out.println();
+                                System.out.println("**************************************************************************");
+                                System.out.println("***Se ha creado la reservación de la mesa número  "
+                                        + agoMesaSeleccionada + " para el " + agoSeleccionado + " de Agosto***");
+                                System.out.println("**************************************************************************");
+                                System.out.println();
                                 break;
                             case 9:
                                 System.out.println("Septiembre");
+                                Scanner ScSep = new Scanner(System.in);
+                                Scanner ScSep2 = new Scanner(System.in);
+                                getReservasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite el día");
+                                int sepSeleccionado = ScSep.nextInt();
+                                getMesasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite la mesa que desea");
+                                int sepMesaSeleccionada = ScSep2.nextInt();
+                                System.out.println("====================================================");
+                                reservarMesa(null, sepMesaSeleccionada, vgEstadoReservada, vgEstadoDisponible);
+                                crearReserva(sepSeleccionado, vgEstadoReservada, vgEstadoDisponible);
+                                
+                                System.out.println("====================================================");
+                                System.out.println();
+                                System.out.println();
+                                System.out.println("**************************************************************************");
+                                System.out.println("***Se ha creado la reservación de la mesa número  "
+                                        + sepMesaSeleccionada + " para el " + sepSeleccionado + " de Septiembre***");
+                                System.out.println("**************************************************************************");
+                                System.out.println();
                                 break;
                             case 10:
                                 System.out.println("Octubre");
+                                Scanner ScOct = new Scanner(System.in);
+                                Scanner ScOct2 = new Scanner(System.in);
+                                getReservasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite el día");
+                                int octSeleccionado = ScOct.nextInt();
+                                getMesasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite la mesa que desea");
+                                int octMesaSeleccionada = ScOct2.nextInt();
+                                System.out.println("====================================================");
+                                reservarMesa(null, octMesaSeleccionada, vgEstadoReservada, vgEstadoDisponible);
+                                crearReserva(octSeleccionado, vgEstadoReservada, vgEstadoDisponible);
+                                
+                                System.out.println("====================================================");
+                                System.out.println();
+                                System.out.println();
+                                System.out.println("**************************************************************************");
+                                System.out.println("***Se ha creado la reservación de la mesa número  "
+                                        + octMesaSeleccionada + " para el " + octSeleccionado + " de Octubre***");
+                                System.out.println("**************************************************************************");
+                                System.out.println();
                                 break;
                             case 11:
                                 System.out.println("Noviembre");
+                                Scanner ScNov = new Scanner(System.in);
+                                Scanner ScNov2 = new Scanner(System.in);
+                                getReservasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite el día");
+                                int novSeleccionado = ScNov.nextInt();
+                                getMesasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite la mesa que desea");
+                                int novMesaSeleccionada = ScNov2.nextInt();
+                                System.out.println("====================================================");
+                                reservarMesa(null, novMesaSeleccionada, vgEstadoReservada, vgEstadoDisponible);
+                                crearReserva(novSeleccionado, vgEstadoReservada, vgEstadoDisponible);
+                                
+                                System.out.println("====================================================");
+                                System.out.println();
+                                System.out.println();
+                                System.out.println("**************************************************************************");
+                                System.out.println("***Se ha creado la reservación de la mesa número  "
+                                        + novMesaSeleccionada + " para el " + novSeleccionado + " de Noviembre***");
+                                System.out.println("**************************************************************************");
+                                System.out.println();
                                 break;
                             case 12:
                                 System.out.println("Diciembre");
+                                Scanner ScDic = new Scanner(System.in);
+                                Scanner ScDic2 = new Scanner(System.in);
+                                getReservasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite el día");
+                                int dicSeleccionado = ScDic.nextInt();
+                                getMesasPorEstado(vgEstadoDisponible);
+                                System.out.println("Favor digite la mesa que desea");
+                                int dicMesaSeleccionada = ScDic2.nextInt();
+                                System.out.println("====================================================");
+                                reservarMesa(null, dicMesaSeleccionada, vgEstadoReservada, vgEstadoDisponible);
+                                crearReserva(dicSeleccionado, vgEstadoReservada, vgEstadoDisponible);
+                                
+                                System.out.println("====================================================");
+                                System.out.println();
+                                System.out.println();
+                                System.out.println("**************************************************************************");
+                                System.out.println("***Se ha creado la reservación de la mesa número  "
+                                        + dicMesaSeleccionada + " para el " + dicSeleccionado + " de Diciembre***");
+                                System.out.println("**************************************************************************");
+                                System.out.println();
                                 break;
                             case 13:
                                 System.out.println("Volviendo al menú principal..");
@@ -121,7 +349,7 @@ public class Menu {
                     break;
                 case 2:
                     System.out.println("Ver reservaciones");
-                    getMesasPorEstado(vgEstadoDisponible);
+                    getMesasPorEstado(vgEstadoReservada);
                     break;
                 case 3:
                     System.out.println("Cancelar reservacion");
@@ -145,9 +373,14 @@ public class Menu {
 
         String usuario = "";
         String clave = "";
-
-        System.out.println("Por favor ingrese sus datos");
-        System.out.println("Ingrese su usuario");
+        System.out.println("================================================================================");
+        System.out.println("             Bienvenido al sistema de reservas del Restaurante XYZ");
+        System.out.println("Le recordamos que nuestro horario de atención al público es de 1 p.m. a 11 p.m.");
+        System.out.println("                  Solo se permite reservar por una hora al día");
+        System.out.println("================================================================================");
+        System.out.println();
+        System.out.println("              Si desea hacer una reservación favor ingrese sus datos");
+        System.out.println("Ingrese su nombre de usuario:");
         usuario = entrada.next();
         System.out.println("Ingrese su contraseña");
         clave = entrada.next();
@@ -193,7 +426,7 @@ public class Menu {
 
             if (vlNumeroMesa == vpNumeroDeMesa && vlEstado.equals(vgEstadoDisponible)) {
 
-                System.out.println("Y de la mesa número " + vpNumeroDeMesa + ", fueron creadas exitosamente!!");
+                System.out.println("La reservacion de la mesa " + vpNumeroDeMesa + " para el día");
 
                 vgArregloDeMesas[indice].setEstado(vgEstadoReservada);
                 vgArregloDeMesas[indice].setCliente(vpCliente);
@@ -233,7 +466,7 @@ public class Menu {
 
             if (vlNumeroReserva == vpNumeroDeReserva && vlEstado.equals(vgReservaDisponible)) {
 
-                System.out.println("La Reserva del día " + vpNumeroDeReserva);
+                System.out.println(vpNumeroDeReserva + ", fue creada exitosamente!!");
 
                 vgArregloDeReservas[indice].setReservaEstado(vgEstadoReservada);
 
