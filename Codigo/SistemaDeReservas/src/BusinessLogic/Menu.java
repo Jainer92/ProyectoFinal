@@ -71,7 +71,8 @@ public class Menu {
                                 int mesaSeleccionada = Sc2.nextInt();
                                 crearReserva(diaSeleccionado, vgEstadoReservada, vgEstadoDisponible);
                                 reservarMesa(null, mesaSeleccionada, vgEstadoReservada, vgEstadoDisponible);
-                                System.out.println("***Se ha creado la reservación de la mesa número "+ mesaSeleccionada + " para el " + diaSeleccionado + " de Enero***");
+                                System.out.println("***Se ha creado la reservación de la mesa número "
+                                        + mesaSeleccionada + " para el " + diaSeleccionado + " de Enero***");
                                 break;
                             case 2:
                                 System.out.println("Febrero");
@@ -106,12 +107,17 @@ public class Menu {
                             case 12:
                                 System.out.println("Diciembre");
                                 break;
+                            case 13:
+                                System.out.println("Volviendo al menú principal..");
+                                break;
+                            default:
+                                System.out.println("Opción inválida. Inténtalo de nuevo.");
+                                break;
 
                         }
                         System.out.println();
-                    } while (opcion != 13);
+                    } while (mesSeleccionado != 13);
                     Scan.close();
-
                     break;
                 case 2:
                     System.out.println("Ver reservaciones");
@@ -129,7 +135,8 @@ public class Menu {
                     break;
             }
             System.out.println();
-        } while (opcion != 4);
+        } 
+        while (opcion != 4);
         entrada.close();
     }
 
