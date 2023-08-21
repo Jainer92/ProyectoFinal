@@ -6,6 +6,12 @@ public class Cliente {
     private String Telefono;
 
 
+    public Cliente(){
+        Nombre = "";
+        Apellido = "";
+        Identificacion = "";
+        Telefono = "";
+    }
     public Cliente(String nombre, String apellido, String identificacion, String telefono) {
         Nombre = nombre;
         Apellido = apellido;
